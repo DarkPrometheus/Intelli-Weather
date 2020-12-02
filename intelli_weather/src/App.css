@@ -1,34 +1,9 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
-.App{
+
+.App {
   display: flex;
   flex-direction: row;
 }
-  .NavBar{
-    height: 100vh;
-    width: 10%;
-    background-color: black;
-    padding: 1rem;
-  }
-    .btnNavBar{
-      background-color: white;
-      color: black;
-      display: flex;
-      justify-content: center;
-      margin-top: 1.5rem;
-      padding: 2rem;
-      font-size: 1.3rem;
-      border-radius: 50px;
-    }
-    .NavBar img{
-      width: 100%;
-    }
-  .Welcome{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    font-size: 10rem;
-  }

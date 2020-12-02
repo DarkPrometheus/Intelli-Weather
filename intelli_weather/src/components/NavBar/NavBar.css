@@ -1,0 +1,22 @@
+.NavBar {
+    height: inherit;
+    width: fit-content;
+    background-color: black;
+    padding: 1rem;
+}
+
+.btnNavBar {
+    background-color: #505050;
+    color: black;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    padding: 2rem;
+    font-size: 1.3rem;
+    border-radius: 50px;
+    color: white;
+}
+
+.NavBar img {
+    width: 100%;
+}
