@@ -14,8 +14,8 @@
 }
 
 .Sensores .Secciones {
-    display: block;
-    width: fit-content;
+    display: flex;
+    flex-direction: row;
 }
 
 /* Seccion */

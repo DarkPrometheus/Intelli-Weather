@@ -1,12 +1,12 @@
 import React from 'react'
 
-export const Sensor = ({ nombre, ultimos10, max, min, ubicacion }) => {
+export const Sensor = ({ nombre, ultimos30, max, min, ubicacion }) => {
     return (
         <div className="Sensor">
             <h5>{nombre}</h5>
             <img src="" alt="Sensor" />
             <div className="SensoresDatos">
-                <p>Ultimos 10s: {ultimos10}</p>
+                <p>Ultimos 10s: {ultimos30}</p>
                 <hr />
                 <p>Maximo: {max}</p>
                 <hr />

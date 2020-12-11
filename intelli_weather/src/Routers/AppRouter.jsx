@@ -5,8 +5,9 @@ import {
     Route
 } from "react-router-dom";
 import Welcome from './../components/Welcome/Welcome';
-import { Sensores } from './../components/Sensores/Sensores';
+
 import NavBar from '../components/NavBar/NavBar';
+import Sensores from './../components/Sensores/Sensores';
 
 export const AppRouter = () => {
     return (
