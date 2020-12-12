@@ -12,39 +12,36 @@ class Sensores extends React.Component {
         this.maximo = this.maximo.bind(this);
     }
 
-    async getData(coleccion) {
+    // Atte: Erick
+    getData(coleccion) {
+      return new Promise((resolve) => {
+      
         let datos = [];
-        await db.collection(coleccion)
-            .onSnapshot((querrySnapshot) => {
-                querrySnapshot.forEach((doc) => {
-                    datos.push({ ...doc.data(), id: doc.id });
-                })
-            })
+        db.collection(coleccion).onSnapshot((querrySnapshot) => {
+          
+          querrySnapshot.forEach((doc) => {
+            datos.push({ ...doc.data(), id: doc.id });
+          });
 
-
-        console.log("getData");
-        console.log(datos);
-        this.setState({ datos: datos });
+          this.setState({ datos: datos });
+          resolve(true);
+        })
+      });
     }
 
-    componentDidMount() {
-        this.getData("Medidas");
+    async componentDidMount() {
+      await this.getData("Medidas");
+      this.maximo();
     }
 
     maximo() {
-        console.log("Antes del ciclo y arreglo");
-        console.log(this.state.datos)
-        Object.keys(this.state.datos).map(a => {
-            console.log(a);
-            console.log("...");
-        });
-        console.log("Despues del ciclo");
+      for (let s in this.state.datos) {
+        console.log(s);
+        console.log("...");
+      }
     }
 
     render() {
-        console.log("state here");
-        console.log(this.state.datos);
-        this.maximo();
         return (
             <div className="Sensores">
                 <h3>Cliente 1</h3>
